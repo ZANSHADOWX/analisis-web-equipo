@@ -1,0 +1,192 @@
+:root {
+  --font-base: clamp(15px, 1.2vw, 18px);
+  --font-menu: clamp(16px, 1.4vw, 22px);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: var(--font-base);
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background: #3e2723;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 6%;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* LOGO PRINCIPAL */
+.logo-img {
+  width: clamp(50px, 4vw, 65px);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* LOGO LOGIN */
+.login-logo {
+  width: clamp(40px, 3vw, 50px);
+  opacity: 0.85;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.login-logo:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* MENU */
+.header-menu ul {
+  display: flex;
+  list-style: none;
+  gap: clamp(20px, 3vw, 45px);
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: var(--font-menu);
+  position: relative;
+  transition: 0.3s;
+}
+
+/* ANIMACION */
+.header-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #d7ccc8;
+  transition: 0.3s;
+}
+
+.header-menu a:hover::after {
+  width: 100%;
+}
+
+/* USUARIO */
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nombre-usuario {
+  color: white;
+  font-size: var(--font-base);
+  font-weight: 500;
+}
+
+/* MENU USUARIO */
+.menu-usuario {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* FLECHA */
+.flecha-usuario {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: transform 0.3s;
+}
+
+/* DROPDOWN */
+.dropdown-usuario {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  min-width: 170px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown-usuario.activo {
+  display: flex;
+}
+
+.dropdown-usuario a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #3e2723;
+  font-size: var(--font-base);
+  transition: background 0.2s;
+}
+
+.dropdown-usuario a:hover {
+  background: #f2f2f2;
+}
+
+/* FLECHA ROTADA */
+.flecha-usuario.rotada {
+  transform: rotate(180deg);
+}
+
+/* BOTONES */
+a,
+button {
+  padding: 10px 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .header-menu ul {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-menu a {
+    font-size: 18px;
+  }
+
+  .logo-img {
+    width: 50px;
+  }
+
+  .login-logo {
+    width: 42px;
+  }
+}

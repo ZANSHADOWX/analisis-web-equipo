@@ -1,0 +1,60 @@
+/* ===================== */
+/* CARRITO FLOTANTE */
+/* ===================== */
+
+.carrito-float {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  background: #6f4e37;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.2s;
+}
+
+.carrito-float:hover {
+  transform: scale(1.1);
+}
+
+.carrito-float img {
+  width: 28px;
+}
+
+.carrito-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 50%;
+}
+
+.carrito-float.vibrar {
+  animation: vibrar 0.3s;
+}
+
+@keyframes vibrar {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

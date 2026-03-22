@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error 505 - Servidor</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f5f0ec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #3e2723;
+        text-align: center;
+      }
+
+      .error-container {
+        padding: 40px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+      }
+
+      .error-container h1 {
+        font-size: 80px;
+        margin: 0;
+        color: #6f4e37;
+      }
+
+      .error-container h2 {
+        font-size: 24px;
+        margin: 10px 0 20px;
+      }
+
+      .error-container p {
+        font-size: 16px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+
+      .btn-return {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #6f4e37;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: 0.3s;
+        font-weight: 600;
+        position: relative;
+      }
+
+      .btn-return:hover {
+        background: #5a3a27;
+      }
+
+      /* Rueda de carga */
+      .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #6f4e37;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        animation: spin 1s linear infinite;
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+        opacity: 0; /* oculto por defecto */
+        transition: opacity 0.3s;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <h1>505</h1>
+      <h2>Error del servidor</h2>
+      <p>
+        Ha ocurrido un error interno en el servidor. Intenta regresar al inicio
+        o recargar la página.
+      </p>
+      <a href="#" class="btn-return" id="refreshBtn">
+        Refrescar página
+        <span class="loader" id="loader"></span>
+      </a>
+    </div>
+
+    <script>
+      const btn = document.getElementById("refreshBtn");
+      const loader = document.getElementById("loader");
+
+      btn.addEventListener("click", function (e) {
+        e.preventDefault(); // evitar la navegación inmediata
+        loader.style.opacity = 1; // mostrar la ruedita
+        btn.textContent = "Redirigiendo"; // cambiar texto
+        btn.appendChild(loader); // volver a agregar el loader
+        setTimeout(() => {
+          window.location.href = "../index.php";
+        }, 3000); // espera 3 segundos antes de redirigir
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+/* ========================= */
+/* ESTILOS PARA LAS CATEGORÍAS */
+/* ========================= */
+.categorias-wrapper {
+  margin-bottom: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.categorias-container {
+  display: grid; /* usamos grid para controlar filas y columnas */
+  grid-template-columns: repeat(5, auto); /* 5 columnas en escritorio */
+  gap: 10px;
+  justify-content: center;
+  padding: 15px 20px;
+  background: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cat-btn {
+  padding: 10px 18px;
+  background: #3498db;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.cat-btn i {
+  font-size: 1.2rem;
+}
+
+.cat-btn .cat-text {
+  display: inline; /* texto visible en escritorio */
+}
+
+.cat-btn:hover {
+  background: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cat-btn.active {
+  background: #e74c3c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* ========================= */
+/* ESTILOS PARA LOS PRODUCTOS */
+/* ========================= */
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.producto-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.producto-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8f8;
+}
+
+.producto-img img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.producto-card:hover .producto-img img {
+  transform: scale(1.1);
+}
+
+.producto-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.producto-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.producto-info .precio {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.btn-carrito {
+  background: #6b3e26;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-carrito:hover {
+  background: #4b2a1a;
+}
+
+.login-required {
+  background: #95a5a6;
+}
+
+.login-required:hover {
+  background: #7f8c8d;
+}
+
+/* ========================= */
+/* MEDIA QUERIES - RESPONSIVO */
+/* ========================= */
+@media screen and (max-width: 1024px) {
+  .categorias-container {
+    grid-template-columns: repeat(
+      5,
+      1fr
+    ); /* mantiene 5 columnas proporcionales */
+  }
+
+  .productos-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .producto-img {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .categorias-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: 10px;
+  }
+
+  .productos-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding: 15px;
+  }
+
+  .producto-img {
+    height: 150px;
+  }
+
+  .producto-info h3 {
+    font-size: 1rem;
+  }
+
+  .producto-info .precio {
+    font-size: 0.95rem;
+  }
+
+  .cat-btn {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+
+  .cat-btn .cat-text {
+    display: none;
+  }
+
+  .categorias-container a {
+    justify-self: center;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .categorias-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: 10px;
+  }
+
+  .categorias-container a {
+    justify-self: center;
+    width: 90%;
+  }
+
+  .productos-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 10px;
+  }
+
+  .producto-img {
+    height: 120px;
+  }
+
+  .producto-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .producto-info .precio {
+    font-size: 0.9rem;
+  }
+
+  .cat-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Ocultar texto en móvil */
+  .cat-btn .cat-text {
+    display: none;
+  }
+}

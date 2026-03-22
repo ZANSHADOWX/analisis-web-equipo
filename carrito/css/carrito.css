@@ -1,0 +1,213 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f0ec;
+  margin: 0;
+  padding: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.carrito-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* TITULO */
+
+.carrito-container h1 {
+  margin-bottom: 10px;
+  color: #5a3e2b;
+}
+
+/* USUARIO */
+
+.usuario {
+  color: #5a3e2b;
+  font-weight: 600;
+}
+
+/* ALERTA LOGIN */
+
+.alerta {
+  background: #ffeaea;
+  color: #c0392b;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* TABLA */
+
+.tabla-carrito {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+.tabla-carrito th {
+  background: #f3ebe6;
+  color: #5a3e2b;
+  font-weight: 600;
+}
+
+.tabla-carrito th,
+.tabla-carrito td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+/* PRODUCTO */
+
+.producto {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  max-width: 320px;
+}
+
+/* IMAGEN */
+
+.producto img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* NOMBRE PRODUCTO */
+
+.nombre-producto {
+  display: block;
+  max-width: 220px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* CANTIDAD */
+
+.cantidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cantidad a {
+  background: #5a3e2b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.cantidad a:hover {
+  background: #7b5239;
+}
+
+/* BOTON ELIMINAR */
+
+.btn-eliminar {
+  color: #c0392b;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-eliminar:hover {
+  text-decoration: underline;
+}
+
+/* TOTAL */
+
+.total {
+  text-align: right;
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #5a3e2b;
+}
+
+/* BOTONES */
+
+.botones {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+/* BOTON GENERAL */
+
+.btn {
+  background: transparent;
+  color: #6b3e26;
+  border: 2px solid #6b3e26;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+/* EFECTO HOVER */
+
+.btn:hover {
+  background: #6b3e26;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* VACIAR CARRITO */
+
+.btn-vaciar {
+  background: #c0392b;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn-vaciar:hover {
+  background: #a93226;
+}
+
+/* FINALIZAR COMPRA */
+
+.btn-finalizar {
+  background: #6b3e26;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn-finalizar:hover {
+  background: #8b5a3c;
+}
+
+/* CARRITO VACIO */
+
+.vacio {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+}

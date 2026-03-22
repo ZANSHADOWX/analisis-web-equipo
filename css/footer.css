@@ -1,0 +1,171 @@
+/* FOOTER CUADRANTE CON REDES SOCIALES HORIZONTALES */
+
+/* FOOTER GENERAL */
+.footer {
+  background: #3e2723; /* café oscuro */
+  color: #fff;
+  font-family: "Inter", "Poppins", sans-serif;
+  width: 100%;
+  padding-top: 40px;
+}
+
+/* FOOTER TOP */
+.footer-top {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* IZQUIERDA: LOGO + ESLOGAN */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1 1 250px;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.footer-brand p {
+  font-size: 13px;
+  color: #f5e1d0;
+  max-width: 180px;
+}
+.footer-logo {
+  width: 45px;
+  height: auto;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* CENTRO: CONTACTO */
+.footer-center {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrado horizontal */
+  gap: 10px;
+  text-align: center;
+}
+.footer-contacto p {
+  font-size: 13px;
+  color: #f5e1d0;
+  margin: 3px 0;
+}
+.btn-footer-info {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 7px 14px;
+  background: transparent;
+  color: #f5e1d0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+.btn-footer-info:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* DERECHA: LEGAL */
+.footer-right {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* pegado a la derecha */
+  text-align: right;
+}
+.footer-legal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-legal li {
+  margin-bottom: 6px;
+}
+.footer-legal a {
+  font-size: 13px;
+  color: #f5e1d0;
+  transition: 0.3s;
+}
+.footer-legal a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* REDES SOCIALES: horizontal debajo del título */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+.footer-social h4 {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  background: #5a3a27;
+  transform: translateY(-3px);
+}
+.social-icons img {
+  width: 18px;
+  filter: brightness(0) invert(1);
+}
+
+/* BANDA INFERIOR */
+.footer-bottom {
+  width: 100%;
+  background: #2d1b17;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: #bca69f;
+  margin-top: 15px;
+}
+
+/* RESPONSIVE MOVILES */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 50px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}

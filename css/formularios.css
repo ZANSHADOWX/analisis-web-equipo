@@ -1,0 +1,120 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* FONDO GENERAL */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("../img/imgenes/fondos/fondo_1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* CONTENEDOR FORMULARIO */
+.form-container {
+  width: 380px;
+  padding: 35px 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+/* TITULO */
+.form-container h2 {
+  margin-bottom: 25px;
+  color: #4e342e;
+  font-weight: 700;
+}
+
+/* FORMULARIO */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS */
+.form-container input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #6d4c41;
+}
+
+/* BOTON */
+.form-container button {
+  margin-top: 5px;
+  padding: 12px;
+  background: #6d4c41;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #4e342e;
+}
+
+/* LINKS */
+.form-links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #6d4c41;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+/* BOTON CANCELAR */
+.btn-cancelar {
+  display: block;
+  margin-top: 10px;
+  padding: 12px;
+  background: #b0bec5;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+  background: #90a4ae;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    padding: 30px;
+  }
+}
