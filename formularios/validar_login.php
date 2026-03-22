@@ -28,6 +28,8 @@
                 if(password_verify($password,$usuario['password'])){
 
                     $_SESSION['usuario'] = $usuario['nombre'];
+                    $_SESSION['id_usuario'] = $usuario['id_usuario'];  // ← NUEVA LÍNEA
+
                     header("Location: ../index.php");
                     exit();
 

@@ -95,7 +95,7 @@
                         Vaciar carrito
                     </a>
                     <?php if(isset($_SESSION["usuario"])) { ?>
-                        <a class="btn-finalizar" href="../compra/checkout.php">
+                        <a class="btn-finalizar" href="../checkout.php">
                             Finalizar compra
                         </a>
                     <?php } else { ?>
